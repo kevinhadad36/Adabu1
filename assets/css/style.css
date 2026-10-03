@@ -398,3 +398,6 @@ p { margin: 0 0 20px; }
   .js-anim .hero__inner > *, .js-anim .listing, .js-anim .hero__zoom { animation: none; }
   .js-anim .split__media img, .hero__bg, .hero__inner { transform: none !important; }
 }
+
+/* Cadrage de la photo « Propriétaires » : garder la main visible */
+.panel .split__media img { object-position: 12% 50%; }
