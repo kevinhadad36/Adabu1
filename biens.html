@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Biens disponibles — Monimo Immobilier, Comores</title>
+  <meta name="description" content="Monimo Immobilier, agence immobilière à Moroni (Zilimadjou). Biens à louer et à vendre aux Comores : maisons, terrains, locaux commerciaux, entrepôts.">
+  <link rel="icon" href="assets/img/logo-monimo.png" type="image/png">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <header class="nav">
+    <div class="container nav__inner">
+      <button class="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <nav class="nav__links" id="nav-links" aria-label="Navigation principale">
+        <a href="biens.html?type=location">Louer</a>
+        <a href="biens.html?type=vente">Acheter</a>
+        <a href="index.html#services">Services</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <a class="nav__logo" href="index.html" aria-label="Monimo Immobilier — accueil"><img src="assets/img/logo-monimo-blanc.png" alt="Monimo Immobilier"></a>
+      <div class="nav__cta"><a class="btn" href="biens.html" aria-current="page">Biens<span class="long"> disponibles</span></a></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-head">
+      <div class="container">
+        <span class="eyebrow">Biens disponibles</span>
+        <h1 class="display">Louer ou acheter<br>aux Comores</h1>
+        <p class="lead muted">Les biens actuellement proposés par Monimo. Ouvrez une fiche pour en savoir plus et nous contacter directement.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="toolbar" role="search">
+        <div class="tabs" role="tablist" aria-label="Type de transaction">
+          <button type="button" role="tab" data-value="all">Tous les biens</button>
+          <button type="button" role="tab" data-value="location">À louer</button>
+          <button type="button" role="tab" data-value="vente">À vendre</button>
+        </div>
+        <div class="toolbar__row">
+          <label><span class="sr-only">Recherche</span><input id="f-q" type="search" placeholder="Ville, quartier, référence…"></label>
+          <label><span class="sr-only">Type de bien</span><select id="f-type"><option value="all">Tous types de biens</option></select></label>
+          <label><span class="sr-only">Île</span><select id="f-ile"><option value="all">Toutes les îles</option></select></label>
+        </div>
+      </div>
+
+      <div class="results">
+        <span id="biens-count"></span>
+        <a class="btn" target="_blank" rel="noopener" href="https://wa.me/2693295761?text=Bonjour%20Monimo%2C%20je%20cherche%20un%20bien%20%3A%20">Vous ne trouvez pas ? Écrivez-nous</a>
+      </div>
+
+      <div class="listings" id="biens-list" style="margin-bottom:100px"></div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <img class="footer__logo" src="assets/img/logo-monimo-blanc.png" alt="Monimo Immobilier">
+          <p>Menons ensemble le projet immobilier qui vous ressemble.</p>
+        </div>
+        <div>
+          <h4>Biens</h4>
+          <ul>
+            <li><a href="biens.html">Tous les biens</a></li>
+            <li><a href="biens.html?type=location">À louer</a></li>
+            <li><a href="biens.html?type=vente">À vendre</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Agence</h4>
+          <ul>
+            <li>Zilimadjou, Moroni</li>
+            <li><a href="tel:+2693295761">+269 329 57 61</a></li>
+            <li><a href="tel:+2693513918">+269 351 39 18</a></li>
+            <li><a href="mailto:monimmo269@gmail.com">monimmo269@gmail.com</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Suivez-nous</h4>
+          <ul>
+            <li><a href="https://www.instagram.com/monimo_comores/" target="_blank" rel="noopener">Instagram</a></li>
+            <li><a href="https://www.facebook.com/p/Monimo-Immobilier-100064006390768/" target="_blank" rel="noopener">Facebook</a></li>
+            <li><a href="https://wa.me/2693295761" target="_blank" rel="noopener">WhatsApp</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span id="year">2026</span> Monimo Immobilier · Comores</span>
+        <span>Ouvert de 8h00 à 15h30</span>
+      </div>
+    </div>
+  </footer>
+
+  <a class="wa-float" href="https://wa.me/2693295761" target="_blank" rel="noopener" aria-label="Écrire à Monimo sur WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.2-.8 1-.9 1.1-.3.2-.6.1a8.2 8.2 0 0 1-2.4-1.5 9 9 0 0 1-1.7-2.1c-.2-.3 0-.5.1-.6l.4-.5.3-.5v-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1 2.5 5.9 5.9 0 0 0 1.2 3.1 13.4 13.4 0 0 0 5.2 4.6c1.9.8 2.7.9 3.6.7a3.1 3.1 0 0 0 2-1.4 2.5 2.5 0 0 0 .2-1.4c-.1-.1-.3-.2-.6-.4ZM12 21.8a9.9 9.9 0 0 1-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8Zm8.4-18.2A11.8 11.8 0 0 0 1.8 17.8L.1 24l6.3-1.7a11.8 11.8 0 0 0 5.6 1.4A11.8 11.8 0 0 0 20.4 3.6Z"/></svg>
+  </a>
+
+  <dialog class="modal" id="bien-modal" aria-label="Fiche du bien">
+    <button class="modal__close" type="button" aria-label="Fermer">×</button>
+    <div class="modal__content"></div>
+  </dialog>
+
+  <script src="assets/js/biens.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
