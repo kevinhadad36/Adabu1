@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dubernet Immobilier — Agence immobilière à Cahors (Lot)</title>
+  <meta name="description" content="Dubernet Immobilier, agence immobilière au 78 rue Henry Puget à Cahors depuis 2012. Vente de maisons, appartements, propriétés et terrains dans le Lot, estimation de votre bien.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='4' fill='%237A2337'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' text-anchor='middle' fill='%23F8F5EE'%3ED%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <header class="nav">
+    <div class="container nav__inner">
+      <button class="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <nav class="nav__links" id="nav-links" aria-label="Navigation principale">
+        <a href="biens.html">Acheter</a>
+        <a href="#vendre">Vendre</a>
+        <a href="#agence">L'agence</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <a class="nav__logo logo" href="index.html" aria-label="Dubernet Immobilier — accueil">
+        <span class="logo__name">Dubernet</span>
+        <span class="logo__sub">Immobilier · Cahors</span>
+      </a>
+      <div class="nav__cta"><a class="btn" href="biens.html">Biens<span class="long"> à vendre</span></a></div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero : pont Valentré -->
+    <section class="hero">
+      <div class="hero__inner">
+        <span class="eyebrow">Agence immobilière · Cahors, Lot</span>
+        <h1 class="display">Votre maison<br>dans le Lot.</h1>
+        <p class="hero__lead">Maisons en pierre, appartements du centre historique, propriétés et terrains : nous vous accompagnons à Cahors et dans tout le Quercy depuis 2012.</p>
+        <div class="hero__actions">
+          <a class="btn btn--solid btn--big" href="biens.html">Voir les biens à vendre <span class="arrow" aria-hidden="true">→</span></a>
+          <a class="btn btn--light" href="#vendre">Faire estimer mon bien</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Accès direct : acheter / vendre -->
+    <section class="paths" aria-label="Accès direct">
+      <div class="container paths__grid">
+        <a class="path" href="biens.html">
+          <span><span class="path__label">Acheter · <span data-count="all"></span></span><span class="path__title">Trouver un bien</span></span>
+          <span class="path__arrow" aria-hidden="true">→</span>
+        </a>
+        <a class="path" href="#vendre">
+          <span><span class="path__label">Vendre · estimation offerte</span><span class="path__title">Vendre mon bien</span></span>
+          <span class="path__arrow" aria-hidden="true">→</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- Sélection -->
+    <section class="section">
+      <div class="container">
+        <div class="section__head">
+          <div>
+            <span class="eyebrow">Sélection du moment</span>
+            <h2 class="heading">Biens à la une</h2>
+          </div>
+          <a class="btn" href="biens.html">Tous les biens à vendre <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+        <div class="listings" id="featured"></div>
+      </div>
+    </section>
+
+    <!-- L'agence -->
+    <section class="section" id="agence">
+      <div class="container split">
+        <div>
+          <span class="eyebrow">L'agence</span>
+          <h2 class="display-md display--brand">Une agence indépendante, au cœur de Cahors.</h2>
+          <p>Installée rue Henry Puget depuis 2012, l'agence Dubernet Immobilier est dirigée par Pierre Dubernet de Garros. Nous connaissons chaque rue de Cahors et chaque village du causse : c'est cette connaissance du terrain que nous mettons au service de votre projet.</p>
+          <ul class="features">
+            <li>Maisons de caractère, propriétés et biens d'exception du Quercy</li>
+            <li>Appartements et maisons de ville à Cahors</li>
+            <li>Terrains à bâtir, locaux et fonds de commerce</li>
+            <li>Un interlocuteur unique, de la visite à la signature chez le notaire</li>
+          </ul>
+          <a class="btn" href="biens.html">Découvrir les biens <span class="arrow" aria-hidden="true">→</span></a>
+        </div>
+        <div class="split__media">
+          <img src="assets/img/agence-pont-valentre.jpg" alt="La tour du pont Valentré, à Cahors" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- Chiffres clés -->
+    <section class="stats-wrap" aria-label="L'agence en bref">
+      <div class="container stats" style="border-top:1px solid var(--ash)">
+        <div class="stat"><span class="stat__value">2012</span><span class="stat__label">Installés à Cahors</span></div>
+        <div class="stat"><span class="stat__value">Lot</span><span class="stat__label">Cahors, vallée & causses</span></div>
+        <div class="stat"><span class="stat__value">0 €</span><span class="stat__label">Estimation offerte</span></div>
+      </div>
+    </section>
+
+    <!-- Bandeau parallaxe plein cadre -->
+    <section class="band" aria-label="Vivre dans le Lot">
+      <div class="band__inner">
+        <span class="eyebrow">Vivre dans le Lot</span>
+        <h2 class="display">Des villages perchés<br>aux berges du Lot.</h2>
+        <p>Saint-Cirq-Lapopie, Mercuès, Luzech, le vignoble de Cahors : nous vous aidons à trouver le lieu qui vous ressemble.</p>
+        <a class="btn btn--light" href="biens.html">Parcourir les biens</a>
+      </div>
+    </section>
+
+    <!-- Communes (défilent au scroll) -->
+    <div class="towns" aria-hidden="true">
+      <div class="towns__track">
+        <span>Cahors</span><span>Mercuès</span><span>Pradines</span><span>Luzech</span><span>Saint-Cirq-Lapopie</span><span>Arcambal</span><span>Lalbenque</span><span>Douelle</span><span>Parnac</span><span>Montcuq</span><span>Catus</span><span>Puy-l'Évêque</span>
+        <span>Cahors</span><span>Mercuès</span><span>Pradines</span><span>Luzech</span><span>Saint-Cirq-Lapopie</span><span>Arcambal</span><span>Lalbenque</span><span>Douelle</span>
+      </div>
+    </div>
+
+    <!-- Services -->
+    <section class="section" id="services">
+      <div class="container">
+        <span class="eyebrow">Nos services</span>
+        <h2 class="heading">Un accompagnement de A à Z</h2>
+        <div class="services" style="margin-top:45px">
+          <article class="service">
+            <span class="service__num">01</span>
+            <h3>Vente</h3>
+            <p>Maisons, appartements, propriétés : mise en valeur, visites qualifiées et négociation.</p>
+          </article>
+          <article class="service">
+            <span class="service__num">02</span>
+            <h3>Estimation</h3>
+            <p>Un avis de valeur précis et gratuit, fondé sur les ventes réelles du secteur.</p>
+          </article>
+          <article class="service">
+            <span class="service__num">03</span>
+            <h3>Terrains</h3>
+            <p>Terrains à bâtir et parcelles, avec les informations d'urbanisme utiles.</p>
+          </article>
+          <article class="service">
+            <span class="service__num">04</span>
+            <h3>Commerces</h3>
+            <p>Locaux et fonds de commerce à Cahors et dans le Grand Cahors.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Vendeurs -->
+    <section class="section" id="vendre">
+      <div class="container">
+        <div class="panel split split--reverse">
+          <div>
+            <span class="eyebrow">Vendeurs</span>
+            <h2 class="display-md">Combien vaut votre maison aujourd'hui ?</h2>
+            <p>Nous nous déplaçons chez vous pour une estimation gratuite et sans engagement, puis nous vous présentons notre plan de mise en vente.</p>
+            <a class="btn btn--solid" href="tel:+33565305763">Demander une estimation</a>
+          </div>
+          <div class="split__media">
+            <img src="assets/img/vendeurs.jpg" alt="Escalier en pierre d'une maison quercynoise à bolet" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <div class="container split" style="align-items:start">
+        <div>
+          <span class="eyebrow">Contact</span>
+          <h2 class="heading">Passez nous voir</h2>
+          <p class="muted">L'agence vous accueille en plein centre de Cahors.</p>
+          <dl class="contact-list">
+            <div><dt>Téléphone</dt><dd><a href="tel:+33565305763">05 65 30 57 63</a></dd></div>
+            <div><dt>Adresse</dt><dd>78 rue Henry Puget<br>46000 Cahors</dd></div>
+            <div><dt>Horaires</dt><dd>
+              <table class="hours">
+                <tr><td>Lundi</td><td>15h00 – 19h00</td></tr>
+                <tr><td>Mardi – vendredi</td><td>9h00 – 19h00</td></tr>
+                <tr><td>Samedi, dimanche</td><td>Fermé</td></tr>
+              </table>
+            </dd></div>
+          </dl>
+          <a class="btn btn--solid" href="tel:+33565305763">Appeler l'agence</a>
+        </div>
+        <div class="map">
+          <iframe title="Plan d'accès — Dubernet Immobilier, 78 rue Henry Puget, Cahors" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            src="https://maps.google.com/maps?q=78%20rue%20Henry%20Puget%2C%2046000%20Cahors&z=16&output=embed"></iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <span class="logo"><span class="logo__name">Dubernet</span><span class="logo__sub">Immobilier · Cahors</span></span>
+          <p>Votre agence immobilière à Cahors et dans le Lot depuis 2012.</p>
+        </div>
+        <div>
+          <h4>Biens</h4>
+          <ul>
+            <li><a href="biens.html">Tous les biens</a></li>
+            <li><a href="biens.html?type=Maison">Maisons</a></li>
+            <li><a href="biens.html?type=Appartement">Appartements</a></li>
+            <li><a href="biens.html?type=Terrain">Terrains</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Agence</h4>
+          <ul>
+            <li>78 rue Henry Puget</li>
+            <li>46000 Cahors</li>
+            <li><a href="tel:+33565305763">05 65 30 57 63</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Vendre</h4>
+          <ul>
+            <li><a href="#vendre">Estimation offerte</a></li>
+            <li><a href="#services">Nos services</a></li>
+            <li><a href="#contact">Nous rendre visite</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span id="year">2026</span> Dubernet Immobilier · Cahors</span>
+        <span>Du lundi au vendredi</span>
+      </div>
+      <p class="credits">Photos : Wikimedia Commons — pont Valentré © Benjamin Smith et © Krzysztof Golik, Saint-Cirq-Lapopie © AronMSzabo, maison à bolet © Sornin87, Le Vigan © Michel Chanaud, vignes de Parnac © MikeDicaire (CC BY-SA 4.0) ; maison du Quercy Blanc © Jean-Luc Bach (CC BY-SA 2.5) ; Mercuès © Torsade de Pointes (CC BY 3.0) ; rue du Château-du-Roi © Genium (CC0).</p>
+    </div>
+  </footer>
+
+  <a class="call-float" href="tel:+33565305763" aria-label="Appeler Dubernet Immobilier">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+  </a>
+
+  <dialog class="modal" id="bien-modal" aria-label="Fiche du bien">
+    <button class="modal__close" type="button" aria-label="Fermer">×</button>
+    <div class="modal__content"></div>
+  </dialog>
+
+  <script src="assets/js/biens.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

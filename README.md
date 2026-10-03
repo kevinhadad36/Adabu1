@@ -14,3 +14,8 @@ Tout se fait dans `assets/js/biens.js` (un bloc par bien) ; les photos vont dans
 
 ## Aperçu local
 `python3 -m http.server` puis http://localhost:8000. Déploiement possible sur n'importe quel hébergeur statique (GitHub Pages, Netlify…).
+
+---
+
+## Autres sites du dépôt
+- [`dubernet/`](dubernet/) — Dubernet Immobilier, Cahors (Lot) : même style, avec parallaxe.

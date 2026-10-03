@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Biens à vendre — Dubernet Immobilier, Cahors</title>
+  <meta name="description" content="Dubernet Immobilier, agence immobilière au 78 rue Henry Puget à Cahors depuis 2012. Vente de maisons, appartements, propriétés et terrains dans le Lot, estimation de votre bien.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='4' fill='%237A2337'/%3E%3Ctext x='32' y='45' font-family='Georgia,serif' font-size='38' text-anchor='middle' fill='%23F8F5EE'%3ED%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <header class="nav">
+    <div class="container nav__inner">
+      <button class="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-links">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <nav class="nav__links" id="nav-links" aria-label="Navigation principale">
+        <a href="biens.html" aria-current="page">Acheter</a>
+        <a href="index.html#vendre">Vendre</a>
+        <a href="index.html#agence">L'agence</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+      <a class="nav__logo logo" href="index.html" aria-label="Dubernet Immobilier — accueil">
+        <span class="logo__name">Dubernet</span>
+        <span class="logo__sub">Immobilier · Cahors</span>
+      </a>
+      <div class="nav__cta"><a class="btn" href="biens.html">Biens<span class="long"> à vendre</span></a></div>
+    </div>
+  </header>
+
+  <main>
+    <section class="page-head">
+      <div class="container">
+        <span class="eyebrow">Biens à vendre</span>
+        <h1 class="display">Acheter à Cahors<br>et dans le Lot</h1>
+        <p class="lead muted">Les biens actuellement proposés par l'agence. Ouvrez une fiche pour en savoir plus et organiser une visite.</p>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="toolbar" role="search">
+        <div class="tabs" role="tablist" aria-label="Type de bien">
+          <button type="button" role="tab" data-value="all">Tous les biens</button>
+          <button type="button" role="tab" data-value="Maison">Maisons</button>
+          <button type="button" role="tab" data-value="Appartement">Appartements</button>
+          <button type="button" role="tab" data-value="Propriété">Propriétés</button>
+          <button type="button" role="tab" data-value="Terrain">Terrains</button>
+        </div>
+        <div class="toolbar__row">
+          <label><span class="sr-only">Recherche</span><input id="f-q" type="search" placeholder="Commune, secteur, référence…"></label>
+          <label><span class="sr-only">Commune</span><select id="f-commune"><option value="all">Toutes les communes</option></select></label>
+          <label><span class="sr-only">Budget maximum</span><select id="f-budget">
+            <option value="all">Tous budgets</option>
+            <option value="150000">Jusqu'à 150 000 €</option>
+            <option value="250000">Jusqu'à 250 000 €</option>
+            <option value="350000">Jusqu'à 350 000 €</option>
+            <option value="500000">Jusqu'à 500 000 €</option>
+          </select></label>
+        </div>
+      </div>
+
+      <div class="results">
+        <span id="biens-count"></span>
+        <a class="btn" href="tel:+33565305763">Vous ne trouvez pas ? Appelez-nous</a>
+      </div>
+
+      <div class="listings" id="biens-list" style="margin-bottom:100px"></div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <span class="logo"><span class="logo__name">Dubernet</span><span class="logo__sub">Immobilier · Cahors</span></span>
+          <p>Votre agence immobilière à Cahors et dans le Lot depuis 2012.</p>
+        </div>
+        <div>
+          <h4>Biens</h4>
+          <ul>
+            <li><a href="biens.html">Tous les biens</a></li>
+            <li><a href="biens.html?type=Maison">Maisons</a></li>
+            <li><a href="biens.html?type=Appartement">Appartements</a></li>
+            <li><a href="biens.html?type=Terrain">Terrains</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Agence</h4>
+          <ul>
+            <li>78 rue Henry Puget</li>
+            <li>46000 Cahors</li>
+            <li><a href="tel:+33565305763">05 65 30 57 63</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Vendre</h4>
+          <ul>
+            <li><a href="index.html#vendre">Estimation offerte</a></li>
+            <li><a href="index.html#services">Nos services</a></li>
+            <li><a href="index.html#contact">Nous rendre visite</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© <span id="year">2026</span> Dubernet Immobilier · Cahors</span>
+        <span>Du lundi au vendredi</span>
+      </div>
+      <p class="credits">Photos : Wikimedia Commons — pont Valentré © Benjamin Smith et © Krzysztof Golik, Saint-Cirq-Lapopie © AronMSzabo, maison à bolet © Sornin87, Le Vigan © Michel Chanaud, vignes de Parnac © MikeDicaire (CC BY-SA 4.0) ; maison du Quercy Blanc © Jean-Luc Bach (CC BY-SA 2.5) ; Mercuès © Torsade de Pointes (CC BY 3.0) ; rue du Château-du-Roi © Genium (CC0).</p>
+    </div>
+  </footer>
+
+  <a class="call-float" href="tel:+33565305763" aria-label="Appeler Dubernet Immobilier">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>
+  </a>
+
+  <dialog class="modal" id="bien-modal" aria-label="Fiche du bien">
+    <button class="modal__close" type="button" aria-label="Fermer">×</button>
+    <div class="modal__content"></div>
+  </dialog>
+
+  <script src="assets/js/biens.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
