@@ -2,7 +2,7 @@
   "use strict";
 
   // Coordonnées de l'agence
-  var WHATSAPP = "2693295761";
+  var WHATSAPP = "33641478339";
 
   var biens = window.MONIMO_BIENS || [];
   var fmt = new Intl.NumberFormat("fr-FR");
