@@ -22,9 +22,9 @@
   }
   function wa(text) { return "https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(text); }
 
-  function card(b) {
+  function card(b, i) {
     return (
-      '<button class="listing" type="button" data-id="' + esc(b.id) + '">' +
+      '<button class="listing" type="button" style="--i:' + (i || 0) + '" data-id="' + esc(b.id) + '">' +
         '<div class="listing__media">' +
           '<img src="' + esc(b.image) + '" alt="' + esc(b.titre) + '" loading="lazy">' +
           '<span class="tag' + (b.transaction === "vente" ? " tag--vente" : "") + '">' + label(b) + "</span>" +
@@ -151,6 +151,76 @@
         (d.get("tel") ? "Téléphone : " + d.get("tel") + "\n" : "") + "\n" + d.get("message");
       window.open(wa(txt), "_blank", "noopener");
     });
+  }
+
+  // ---------- Animations : parallaxe & apparitions ----------
+  var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  if (!reduce && "IntersectionObserver" in window) {
+    // Calque de fond du hero (déplacé plus lentement que la page)
+    var hero = document.querySelector(".hero");
+    var heroBg = null, heroInner = null;
+    var heroImage = hero ? getComputedStyle(hero).backgroundImage : "none";
+    document.documentElement.classList.add("js-anim");
+    if (hero) {
+      heroBg = document.createElement("div");
+      heroBg.className = "hero__bg";
+      heroBg.setAttribute("aria-hidden", "true");
+      heroBg.style.backgroundImage = heroImage;
+      heroBg.style.backgroundSize = "cover";
+      heroBg.style.backgroundPosition = "center";
+      var zoom = document.createElement("div");
+      zoom.className = "hero__zoom";
+      heroBg.appendChild(zoom);
+      hero.insertBefore(heroBg, hero.firstChild);
+      heroInner = hero.querySelector(".hero__inner");
+    }
+
+    // Éléments qui apparaissent au défilement, en cascade dans un même bloc
+    var targets = document.querySelectorAll(
+      ".path, .section .eyebrow, .section .heading, .section .display-md, .section .section__head .btn," +
+      ".section p, .features li, .split .btn, .service, .split__media, .contact-list, .form, .toolbar, .footer__grid > div"
+    );
+    var groups = new Map();
+    targets.forEach(function (el) {
+      if (el.closest(".listing") || el.closest(".modal") || el.closest(".form")) return;
+      var parent = el.closest(".container") || document.body;
+      var n = groups.get(parent) || 0;
+      groups.set(parent, n + 1);
+      el.setAttribute("data-reveal", "");
+      el.style.setProperty("--d", Math.min(n, 6) * 90 + "ms");
+    });
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (e) {
+        if (e.isIntersecting) { e.target.classList.add("is-visible"); io.unobserve(e.target); }
+      });
+    }, { rootMargin: "0px 0px -8% 0px", threshold: 0.12 });
+    document.querySelectorAll("[data-reveal]").forEach(function (el) { io.observe(el); });
+
+    // Parallaxe au défilement
+    var medias = Array.prototype.slice.call(document.querySelectorAll(".split__media"));
+    var ticking = false;
+    function parallax() {
+      ticking = false;
+      var vh = window.innerHeight;
+      var sy = window.scrollY;
+      if (hero && sy < hero.offsetHeight + 100) {
+        heroBg.style.transform = "translate3d(0," + (sy * 0.35).toFixed(1) + "px,0)";
+        if (heroInner) {
+          heroInner.style.transform = "translate3d(0," + (sy * 0.18).toFixed(1) + "px,0)";
+          heroInner.style.opacity = Math.max(0, 1 - sy / (hero.offsetHeight * 0.85)).toFixed(3);
+        }
+      }
+      medias.forEach(function (m) {
+        var r = m.getBoundingClientRect();
+        if (r.bottom < 0 || r.top > vh) return;
+        var progress = (r.top + r.height / 2 - vh / 2) / (vh / 2 + r.height / 2); // -1 → 1
+        m.style.setProperty("--py", (progress * -6).toFixed(2) + "%");
+      });
+    }
+    function onScroll() { if (!ticking) { ticking = true; requestAnimationFrame(parallax); } }
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onScroll);
+    parallax();
   }
 
   var y = document.getElementById("year");

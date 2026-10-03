@@ -9,7 +9,7 @@
  *   prix        : nombre en francs comoriens (KMF), loyer mensuel pour une location — ou null pour « Prix sur demande »
  *   surface     : texte libre (ex. "120 m²", "300 à 500 m²")
  *   details     : liste de caractéristiques affichées dans la fiche
- *   image       : chemin d'une photo dans assets/img/ (ou une URL)
+ *   image       : chemin d'une photo (ou une URL)
  *
  * Biens ci-dessous : repris des publications Instagram @monimo_comores.
  */
