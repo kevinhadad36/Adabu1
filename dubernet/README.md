@@ -20,3 +20,7 @@ Wikimedia Commons, licences libres — crédits affichés en pied de page (pont 
 
 ## Aperçu local
 `cd dubernet && python3 -m http.server` puis http://localhost:8000.
+
+## Version autonome (à ouvrir sur téléphone ou à envoyer)
+`autonome/index.html` et `autonome/biens.html` embarquent chacun styles, scripts, polices et photos : ils s'affichent correctement même ouverts directement depuis un téléphone, sans le dossier `assets/`. Les garder dans le même dossier pour que les liens entre les deux pages fonctionnent.
+Après toute modification du site, les régénérer avec `python3 build-autonome.py` (nécessite ImageMagick).
